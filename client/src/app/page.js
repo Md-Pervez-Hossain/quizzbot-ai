@@ -72,9 +72,7 @@ export default function Home() {
           </a>
         </p>
       </div>
-      <div className="bg-gradient-to-tr from-[#FC495F] from-62%  to-[#FFC371] to-38% w-1/2">
-        
-      </div>
+      <div className="bg-gradient-to-tr from-[#FC495F] from-62%  to-[#FFC371] to-38% w-1/2"></div>
     </main>
   );
 }
