@@ -1,13 +1,15 @@
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
-import Divider from "@/components/Divider";
-import PrimaryButton from "@/components/PrimaryButton";
-import RememberMe from "@/components/RememberMe";
+// import { FcGoogle } from "react-icons/fc";
+// import { FaFacebook } from "react-icons/fa";
+// import Divider from "@/components/Divider";
+// import PrimaryButton from "@/components/PrimaryButton";
+// import RememberMe from "@/components/RememberMe";
+// import About from "@/components/About/About";
+// import Home from "../../src/components/Home/Home";
 
 export default function Home() {
   return (
     <main className="flex h-screen ">
-      <div className="flex flex-col justify-center items-center p-8 bg-white w-1/2 lg:px-40">
+      {/* <div className="flex flex-col justify-center items-center p-8 bg-white w-1/2 lg:px-40">
         <div className="flex justify-start w-full mb-10">
           <img src="./asset/logo.png" alt="" className="w-48" />
         </div>
@@ -74,7 +76,10 @@ export default function Home() {
       </div>
       <div className="bg-gradient-to-tr from-[#FC495F] from-62%  to-[#FFC371] to-38% w-1/2">
         
-      </div>
+      </div> */}
+      {/* <Home></Home> */}
+      {/* <About></About> */}
+      <h2>Common content</h2>
     </main>
   );
 }
