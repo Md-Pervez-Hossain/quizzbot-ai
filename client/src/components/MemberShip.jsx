@@ -27,6 +27,8 @@ const MemberShip = () => {
               <p className="ml-[13.2rem]">31/12/1996</p>
             </div>
           </div>
+
+          {/* Change Plan button */}
           <div className="flex justify-center mt-4 ml-3">
             <button className="rounded-lg px-4 bg-gradient-to-r from-[#FC495F] to-[#FFC371] text-white">
               Change Plan
@@ -34,8 +36,6 @@ const MemberShip = () => {
           </div>
         </div>
       </div>
-
-      {/* Change Plan button */}
     </section>
   );
 };
