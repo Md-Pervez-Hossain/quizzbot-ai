@@ -1,5 +1,4 @@
 "use client";
-
 import RememberMe from "@/components/RememberMe";
 import PrimaryButton from "@/components/PrimaryButton";
 import { AuthContext } from "@/context/AuthProvider";
@@ -10,9 +9,11 @@ import SocialMediaLogin from "./SocialMediaLogin";
 import EmailInput from "./Shared/EmailInput";
 import PasswordInput from "./Shared/PasswordInput";
 import { validateForm } from "@/utils/validateForm";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const { login } = useContext(AuthContext);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     email: "",
@@ -36,16 +37,25 @@ const LoginForm = () => {
   };
 
   const handleSignIn = () => {
-    if (validateForm(data, setErrors)) {
+    if (validateForm(data, setErrors, false)) {
+      console.log('click')
       const { email, password } = data;
+      console.log(email, password);
       setLoading(true);
       login(email, password)
         .then((res) => {
           const user = res.user;
           console.log(user);
           setLoading(false);
+          router.push("/dashboard");
         })
-        .catch((err) => setLoading(false));
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
+    }
+    else{
+      console.log("issue")
     }
   };
 
@@ -70,7 +80,7 @@ const LoginForm = () => {
       <RememberMe />
       {loading ? (
         <PrimaryButton loading={loading}>
-          <LoaderSpinner /> Loading
+          <LoaderSpinner /> Logging in
         </PrimaryButton>
       ) : (
         <PrimaryButton funq={handleSignIn}>Log In</PrimaryButton>
