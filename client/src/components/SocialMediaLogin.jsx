@@ -1,17 +1,17 @@
 "use client";
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthProvider";
+import { useRouter } from "next/navigation";
 
 const SocialMediaLogin = () => {
   const { signInWithGoogle } = useContext(AuthContext);
-
+  const router = useRouter();
   const handleGoogleLogin = () => {
     signInWithGoogle().then((res) => {
-      const user = res.user
+      const user = res.user;
       console.log(res);
-
+      router.push("/dashboard");
     });
   };
 
@@ -23,7 +23,6 @@ const SocialMediaLogin = () => {
         rounded-3xl
         "
         onClick={handleGoogleLogin}
-        
       >
         <FcGoogle className="mr-3 text-xl" />
         Sign In with Google
