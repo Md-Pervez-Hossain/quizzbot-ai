@@ -19,11 +19,11 @@ const MemberShip = () => {
           <p>Action</p>
         </div>
 
-        <div className="lg:flex lg:justify-between items-center">
+        <div className="lg:flex md:flex md:justify-between lg:justify-between items-center">
           {/* Current Plan Data div style */}
           <div className="bg-gray-100 rounded-lg p-4 mt-4">
             {/* Current Plan Data */}
-            <div className="lg:flex md:flex lg:justify-around md:justify-between space-y-3 lg:space-y-0 md:space-y-0 lg:w-[51rem] md:w-[26rem] overflow-hidden">
+            <div className="lg:flex md:flex lg:justify-around md:justify-around space-y-3 lg:space-y-0 md:space-y-0 lg:w-[51rem] md:w-[33.5rem] overflow-hidden">
               <p className="lg:-ml-6">Trial</p>
               <p className="lg:ml-[4.7rem]">One Time</p>
               <p>32/12/1996</p>
