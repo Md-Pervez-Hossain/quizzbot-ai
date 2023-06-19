@@ -26,6 +26,16 @@ const Links = () => {
       name: "Contact",
       link: "/contact",
     },
+    {
+      id: 4,
+      name: "Membership",
+      link: "/membership",
+    },
+    {
+      id: 5,
+      name: "Saved Questions",
+      link: "/saved-questions",
+    },
   ];
 
   return (
