@@ -1,14 +1,12 @@
 const Transaction = () => {
   return (
-    <section className="min-h-screen shadow-2xl bg-white rounded-lg mx-5">
+    <section className="border-2 border-[#EEE]  rounded-xl py-5 mt-5 mr-8">
       {/* Membership Text */}
-      <h1 className="text-center text-3xl mt-10 pt-10 font-bold">
-        Transaction
-      </h1>
+      <h1 className="text-center text-3xl font-bold">Transaction</h1>
 
       {/* Current Plan section */}
       <div className="px-10 lg:mt-0 md:mt-0 mt-5">
-        <h1 className="lg:text-2xl md:text-2xl text-lg lg:text-left md:text-left text-center">
+        <h1 className="lg:text-xl md:text-xl text-lg lg:text-left md:text-left text-center">
           Current Plan
         </h1>
 

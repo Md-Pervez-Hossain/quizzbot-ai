@@ -6,6 +6,7 @@ import React from "react";
 import logo from "../../../public/logo.png";
 import { AiFillHome } from "react-icons/ai";
 import { FaPhone, FaPollH } from "react-icons/fa";
+import { AiFillGift, AiFillFileText } from "react-icons/ai";
 
 const Links = () => {
   const pathname = usePathname();
@@ -30,6 +31,11 @@ const Links = () => {
       id: 4,
       name: "Membership",
       link: "/membership",
+    },
+    {
+      id: 5,
+      name: "Transaction",
+      link: "/transaction",
     },
     {
       id: 5,
@@ -82,6 +88,20 @@ const Links = () => {
               {header.name === "Contact" ? (
                 <>
                   <FaPhone></FaPhone> {header.name}
+                </>
+              ) : (
+                <></>
+              )}
+              {header.name === "Membership" ? (
+                <>
+                  <AiFillGift></AiFillGift> {header.name}
+                </>
+              ) : (
+                <></>
+              )}
+              {header.name === "Transaction" ? (
+                <>
+                  <AiFillFileText></AiFillFileText> {header.name}
                 </>
               ) : (
                 <></>
