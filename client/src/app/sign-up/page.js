@@ -1,16 +1,19 @@
 "use client";
 
 import Divider from "@/components/Divider";
+import LoaderSpinner from "@/components/Loader/LoaderSpinner";
 import PrimaryButton from "@/components/PrimaryButton";
 import EmailInput from "@/components/Shared/EmailInput";
 import PasswordInput from "@/components/Shared/PasswordInput";
 import SocialMediaLogin from "@/components/SocialMediaLogin";
 import { AuthContext } from "@/context/AuthProvider";
 import { validateForm } from "@/utils/validateForm";
+import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 
 const page = () => {
   const { createUser, updateUser } = useContext(AuthContext);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     fullName: "",
@@ -22,6 +25,11 @@ const page = () => {
     email: "",
     password: "",
   });
+  const [isAgreed, setIsAgreed] = useState(false);
+
+  const handleAgreeChange = (e) => {
+    setIsAgreed(e.target.checked);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +44,7 @@ const page = () => {
   };
 
   const handleSignUp = () => {
-    if (validateForm(data, setErrors)) {
+    if (validateForm(data, setErrors, true) && isAgreed) {
       const { fullName, email, password } = data;
       setLoading(true);
       createUser(email, password)
@@ -47,7 +55,10 @@ const page = () => {
             displayName: fullName,
           };
           updateUser(userInfo)
-            .then((result) => {})
+            .then((result) => {
+              setLoading(false);
+              router.push("/dashboard");
+            })
             .catch((err) => {
               console.log("Error updating name");
             });
@@ -57,6 +68,13 @@ const page = () => {
           console.log(err);
           setLoading(false);
         });
+    } else {
+      if (!isAgreed) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          agree: "Please agree to the Terms & Condition",
+        }));
+      }
     }
   };
 
@@ -99,6 +117,7 @@ const page = () => {
           handleChange={handleChange}
           error={errors.password}
         />
+
         <div className="flex items-start justify-start text-left mt-5 mb-10">
           <input
             type="checkbox"
@@ -107,11 +126,31 @@ const page = () => {
           />
           <label htmlFor="rememberMe" className="ml-2 text-gray-700 text-sm">
             By clicking Register, you agree to our Terms & Conditions.
+
+        <div className="flex justify-start items-start my-10">
+          <input
+            type="checkbox"
+            id="rememberMe"
+            className="form-checkbox h-4 w-4 text-indigo-600"
+            onChange={handleAgreeChange}
+          />
+          <label
+            htmlFor="rememberMe"
+            className="ml-2 text-gray-700 text-sm text-left"
+          >
+            By clicking on Register button you are agree to our Terms &
+            Condition
+
           </label>
         </div>
-        <PrimaryButton funq={handleSignUp} loading={loading}>
-          Sign in
-        </PrimaryButton>
+        {!isAgreed && <p className="text-red-500 text-sm mt-1">{errors.agree}</p>}
+        {loading ? (
+          <PrimaryButton loading={loading}>
+            <LoaderSpinner /> Signing in
+          </PrimaryButton>
+        ) : (
+          <PrimaryButton funq={handleSignUp}>Sign In</PrimaryButton>
+        )}
       </div>
     </div>
   );

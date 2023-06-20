@@ -1,9 +1,9 @@
-export const validateForm = (data, setErrors) => {
+export const validateForm = (data, setErrors, validateFullName = true) => {
   let isValid = true;
   const { email, password, fullName } = data;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!fullName) {
+  if (validateFullName && !fullName) {
     setErrors((prevErrors) => ({
       ...prevErrors,
       fullName: "Please enter your full name",
