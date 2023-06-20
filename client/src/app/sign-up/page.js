@@ -126,31 +126,33 @@ const page = () => {
           />
           <label htmlFor="rememberMe" className="ml-2 text-gray-700 text-sm">
             By clicking Register, you agree to our Terms & Conditions.
-
-        <div className="flex justify-start items-start my-10">
-          <input
-            type="checkbox"
-            id="rememberMe"
-            className="form-checkbox h-4 w-4 text-indigo-600"
-            onChange={handleAgreeChange}
-          />
-          <label
-            htmlFor="rememberMe"
-            className="ml-2 text-gray-700 text-sm text-left"
-          >
-            By clicking on Register button you are agree to our Terms &
-            Condition
-
           </label>
+          <div className="flex justify-start items-start my-10">
+            <input
+              type="checkbox"
+              id="rememberMe"
+              className="form-checkbox h-4 w-4 text-indigo-600"
+              onChange={handleAgreeChange}
+            />
+            <label
+              htmlFor="rememberMe"
+              className="ml-2 text-gray-700 text-sm text-left"
+            >
+              By clicking on Register button you are agree to our Terms &
+              Condition
+            </label>
+          </div>
+          {!isAgreed && (
+            <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
+          )}
+          {loading ? (
+            <PrimaryButton loading={loading}>
+              <LoaderSpinner /> Signing in
+            </PrimaryButton>
+          ) : (
+            <PrimaryButton funq={handleSignUp}>Sign In</PrimaryButton>
+          )}
         </div>
-        {!isAgreed && <p className="text-red-500 text-sm mt-1">{errors.agree}</p>}
-        {loading ? (
-          <PrimaryButton loading={loading}>
-            <LoaderSpinner /> Signing in
-          </PrimaryButton>
-        ) : (
-          <PrimaryButton funq={handleSignUp}>Sign In</PrimaryButton>
-        )}
       </div>
     </div>
   );
