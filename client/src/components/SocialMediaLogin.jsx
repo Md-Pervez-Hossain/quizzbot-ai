@@ -18,9 +18,7 @@ const SocialMediaLogin = () => {
   return (
     <div className="w-full">
       <button
-        className=" lg:mb-6 outline flex justify-center  items-center outline-btn-outline
-           text-[#000000]  px-16 py-2 mb-2  w-full 
-        rounded-3xl
+        className=" lg:mb-6 outline flex justify-center  items-center outline-btn-outline text-[#000000] px-16 py-2 mb-2  w-full rounded-2xl
         "
         onClick={handleGoogleLogin}
         

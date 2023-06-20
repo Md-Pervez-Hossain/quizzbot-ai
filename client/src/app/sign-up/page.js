@@ -79,7 +79,7 @@ const page = () => {
           <input
             type="text"
             name="fullName"
-            className="border border-gray-300 rounded-3xl w-full p-2 pl-4 placeholder:text-xs text-black"
+            className="border border-gray-300 rounded-2xl w-full p-2 pl-4 placeholder:text-xs text-black"
             placeholder="Your name"
             value={data.fullName}
             onChange={handleChange}
@@ -99,15 +99,14 @@ const page = () => {
           handleChange={handleChange}
           error={errors.password}
         />
-        <div className="flex items-center my-10">
+        <div className="flex items-start justify-start text-left mt-5 mb-10">
           <input
             type="checkbox"
             id="rememberMe"
-            className="form-checkbox h-4 w-4 text-indigo-600"
+            className="form-checkbox text-indigo-600 mt-1"
           />
           <label htmlFor="rememberMe" className="ml-2 text-gray-700 text-sm">
-            By clicking on Register button you are agree to our Terms &
-            Condition
+            By clicking Register, you agree to our Terms & Conditions.
           </label>
         </div>
         <PrimaryButton funq={handleSignUp} loading={loading}>
