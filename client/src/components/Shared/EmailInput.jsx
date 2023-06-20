@@ -8,7 +8,7 @@ const EmailInput = ({ email, handleChange, error }) => {
         type="email"
         id="email"
         name="email"
-        className="border border-gray-300 rounded-3xl w-full p-2 pl-4 placeholder:text-xs text-black"
+        className="border border-gray-300 rounded-2xl w-full p-2 pl-4 placeholder:text-xs text-black"
         placeholder="john@example.com"
         value={email}
         onChange={handleChange}
