@@ -119,15 +119,7 @@ const page = () => {
         />
 
         <div className="flex items-start justify-start text-left mt-5 mb-10">
-          <input
-            type="checkbox"
-            id="rememberMe"
-            className="form-checkbox text-indigo-600 mt-1"
-          />
-          <label htmlFor="rememberMe" className="ml-2 text-gray-700 text-sm">
-            By clicking Register, you agree to our Terms & Conditions.
-          </label>
-          <div className="flex justify-start items-start my-10">
+          <div className="flex justify-start items-start">
             <input
               type="checkbox"
               id="rememberMe"
@@ -142,17 +134,17 @@ const page = () => {
               Condition
             </label>
           </div>
-          {!isAgreed && (
-            <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
-          )}
-          {loading ? (
-            <PrimaryButton loading={loading}>
-              <LoaderSpinner /> Signing in
-            </PrimaryButton>
-          ) : (
-            <PrimaryButton funq={handleSignUp}>Sign In</PrimaryButton>
-          )}
         </div>
+        {!isAgreed && (
+          <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
+        )}
+        {loading ? (
+          <PrimaryButton loading={loading}>
+            <LoaderSpinner /> Signing in
+          </PrimaryButton>
+        ) : (
+          <PrimaryButton funq={handleSignUp}>Sign In</PrimaryButton>
+        )}
       </div>
     </div>
   );
