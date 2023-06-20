@@ -23,7 +23,7 @@ const Header = () => {
           {buttonOptions.map((option, index) => (
             <div
               key={index}
-              className="hover:border-b-2 mx-3 hover:border-b-gradient-color-62 hover:text-gradient-color-62 text-[#626262] font-semibold px-2 py-5 cursor-pointer text-center flex items-center justify-center hover:bg-transparent hover:transition duration-300 ease-in-out relative"
+              className="hover:border-b-2 hover:border-b-gradient-color-62 hover:text-gradient-color-62 text-[#626262] font-semibold mx-2 py-5 cursor-pointer text-center flex items-center justify-center hover:bg-transparent hover:transition duration-300 ease-in-out relative text-sm"
               style={{ height: "70px" }}
             >
               {option}

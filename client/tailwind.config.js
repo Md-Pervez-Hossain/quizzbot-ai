@@ -15,7 +15,7 @@ module.exports = {
         "gradient-color": {
           62: "#FC495F",
           38: "#FFC371",
-          ff : "ff0000"
+          ff: "ff0000",
         },
       },
       backgroundImage: {
@@ -24,11 +24,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       backgroundSize: {
-        'size-200': '200% 200%',
+        "size-200": "200% 200%",
       },
       backgroundPosition: {
-        'pos-0': '0% 0%',
-        'pos-100': '100% 100%',
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
       },
     },
   },
