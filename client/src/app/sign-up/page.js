@@ -117,23 +117,19 @@ const page = () => {
           handleChange={handleChange}
           error={errors.password}
         />
-
-        <div className="flex items-start justify-start text-left mt-5 mb-10">
-          <div className="flex justify-start items-start">
-            <input
-              type="checkbox"
-              id="rememberMe"
-              className="form-checkbox h-4 w-4 text-indigo-600"
-              onChange={handleAgreeChange}
-            />
-            <label
-              htmlFor="rememberMe"
-              className="ml-2 text-gray-700 text-sm text-left"
-            >
-              By clicking on Register button you are agree to our Terms &
-              Condition
-            </label>
-          </div>
+        <div className="flex justify-start items-start my-10">
+          <input
+            type="checkbox"
+            id="rememberMe"
+            className="form-checkbox h-4 w-4 text-indigo-600"
+            onChange={handleAgreeChange}
+          />
+          <label
+            htmlFor="rememberMe"
+            className="ml-2 text-gray-700 text-sm text-left"
+          >
+            By clicking Register, you agree to our Terms & Conditions.
+          </label>
         </div>
         {!isAgreed && (
           <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
