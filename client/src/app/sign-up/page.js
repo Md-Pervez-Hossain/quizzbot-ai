@@ -128,11 +128,12 @@ const page = () => {
             htmlFor="rememberMe"
             className="ml-2 text-gray-700 text-sm text-left"
           >
-            By clicking on Register button you are agree to our Terms &
-            Condition
+            By clicking Register, you agree to our Terms & Conditions.
           </label>
         </div>
-        {!isAgreed && <p className="text-red-500 text-sm mt-1">{errors.agree}</p>}
+        {!isAgreed && (
+          <p className="text-red-500 text-sm mt-1">{errors.agree}</p>
+        )}
         {loading ? (
           <PrimaryButton loading={loading}>
             <LoaderSpinner /> Signing in

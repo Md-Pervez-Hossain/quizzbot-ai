@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/.e0e713f5f70b201c373d467713d5be5b68c38cb0-audit.json",
+    "files": [
+        {
+            "date": 1687344138689,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-21-16-success.log",
+            "hash": "859d914b5422ef8822db352585150216faad943a0e1e8e9efa0d9b9c96c7f664"
+        },
+        {
+            "date": 1687346111631,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-21-17-success.log",
+            "hash": "bc1f32c034ea9155dbc806ea38159f65695a8e385cd9d0804086a2c865c5eea5"
+        }
+    ],
+    "hashType": "sha256"
+}
