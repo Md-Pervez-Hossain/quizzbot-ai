@@ -3,6 +3,7 @@ import { ISingleSavedQuestion } from './single_saved_questions.interface'
 import {
   difficulty,
   howManyQuestions,
+  languages,
   numberOfSets,
 } from './single_saved_question.constant'
 
@@ -20,6 +21,7 @@ const SingleSavedQuestionSchema = new Schema<ISingleSavedQuestion>(
     language: {
       type: String,
       required: true,
+      enum: languages,
     },
     difficulty: {
       type: String,

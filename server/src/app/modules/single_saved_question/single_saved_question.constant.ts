@@ -1,6 +1,7 @@
 import {
   IDifficulty,
   IHowManyQuestions,
+  ILanguage,
   INumberOfSets,
 } from './single_saved_questions.interface'
 
@@ -23,4 +24,25 @@ export const howManyQuestions: IHowManyQuestions[] = [
   '8',
   '9',
   '10',
+]
+
+export const languages: ILanguage[] = [
+  'Arabic',
+  'Chinese',
+  'Danish',
+  'English',
+  'French',
+  'German',
+  'Hebrew',
+  'Hindi',
+  'Indonesian',
+  'Italian',
+  'Japanese',
+  'Polish',
+  'Romanian',
+  'Russian',
+  'Spanish',
+  'Swedish',
+  'Turkish',
+  'Vietnamese',
 ]
