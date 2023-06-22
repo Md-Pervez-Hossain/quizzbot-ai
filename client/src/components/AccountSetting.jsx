@@ -43,10 +43,10 @@ const AccountSetting = () => {
                   class="relative m-0 block min-w-0 flex-auto cursor-pointer  
                   border-solid px-6 py-1 w-full rounded-2xl border-2
                  border-[#f9f9f9] mt-2   bg-clip-padding font-normal
-                   leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 
+                   leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-6 
                    file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-xl file:border-0
-                     file:border-none file:bg-gradient-to-r from-[#FC495F] to-[#FFC371] file:px-3 
-                     file:py-[0.12rem] file:text-white file:transition file:duration-150
+                     file:border-none file:bg-gradient-to-r from-[#FC495F] to-[#FFC371] file:px-4 
+                     file:py-[0.26rem] file:text-white file:transition file:duration-150
                       file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem]
                        hover:file:bg-neutral-200 focus:border-[#0e0e0e] focus:outline-none"
                   id="formFileLg"
