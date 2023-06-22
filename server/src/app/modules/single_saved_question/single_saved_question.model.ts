@@ -1,11 +1,17 @@
 import { Schema, model } from 'mongoose'
 import { ISingleSavedQuestion } from './single_saved_questions.interface'
+import {
+  difficulty,
+  howManyQuestions,
+  numberOfSets,
+} from './single_saved_question.constant'
 
 const SingleSavedQuestionSchema = new Schema<ISingleSavedQuestion>(
   {
     how_many_questions: {
-      type: Number,
+      type: String,
       required: true,
+      enum: howManyQuestions,
     },
     paste_text: {
       type: String,
@@ -18,10 +24,12 @@ const SingleSavedQuestionSchema = new Schema<ISingleSavedQuestion>(
     difficulty: {
       type: String,
       required: true,
+      enum: difficulty,
     },
     number_of_sets: {
-      type: Number,
+      type: String,
       required: true,
+      enum: numberOfSets,
     },
   },
   {
