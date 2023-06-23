@@ -44,6 +44,11 @@
             "date": 1687423233171,
             "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-22-14-error.log",
             "hash": "6c6d830f652aef408cdcd7009d97d2917fce81034253447aad825ba9372eddae"
+        },
+        {
+            "date": 1687544298185,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-24-00-error.log",
+            "hash": "c29d6ed0e831cf7ecededab1a58624b63e33840287184a7f1feb8cdea8b4b1d4"
         }
     ],
     "hashType": "sha256"
