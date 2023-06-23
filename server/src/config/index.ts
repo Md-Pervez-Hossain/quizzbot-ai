@@ -10,4 +10,5 @@ export default {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 8000,
   database_string: process.env.DATABASE_STRING,
+  openai_api_key: process.env.OPENAI_API_KEY,
 }

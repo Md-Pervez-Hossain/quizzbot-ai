@@ -16,7 +16,7 @@ export const generateText = catchAsync(
     1. {Question will be here}, True/False
     2. {Question will be here}, True/False
     3. {Question will be here}, True/False
-    ... So on
+    ... So on   
     
     `
 
@@ -38,19 +38,11 @@ export const generateText = catchAsync(
 
     const generatedText = generatedTextResponse.data.choices?.[0].text || ''
 
-    // Extract questions from the generated text
-    const questionsRegex = /\d+\.\s*(.*?)\s*(?:\(([a-z])\)|True\/False)/gi
-    const questions: string[] = []
-    let match
-    while ((match = questionsRegex.exec(generatedText))) {
-      questions.push(match[1])
-    }
-
     // Create a new text generation document
     // const textGeneration = new TextGeneration({
     //   prompt: req.body.prompt,
     //   generatedText,
-    // });
+    // })
 
     // Save the generated text
     // await textGeneration.save()
@@ -59,7 +51,7 @@ export const generateText = catchAsync(
       statusCode: httpStatus.CREATED,
       success: true,
       message: 'Generated text successfully',
-      data: questions,
+      data: generatedText,
     })
 
     next()

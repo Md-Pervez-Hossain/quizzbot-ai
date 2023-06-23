@@ -53,7 +53,6 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
     message = error.message
     errorMessages = [{ message: error.message, path: '' }]
   }
-  
 
   res.status(statusCode).json({
     status,
