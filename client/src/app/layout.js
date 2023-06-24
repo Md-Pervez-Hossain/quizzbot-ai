@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           {pathname !== "/sign-up" && pathname !== "/" ? (
             <>
-              <div className="grid grid-cols-5 gap-8  ">
+              <div className="grid grid-cols-5 gap-8">
                 <div className="col-span-1 bg-white font-bold  p-10 sticky top-0 ">
                   <Sidebar></Sidebar>
                 </div>
@@ -50,7 +50,6 @@ export default function RootLayout({ children }) {
           ) : (
             <>{children}</>
           )}
-
           <Footer />
         </AuthProvider>
       </body>
