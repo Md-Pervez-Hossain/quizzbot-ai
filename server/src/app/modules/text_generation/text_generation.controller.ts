@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express'
 import catchAsync from '../../../shared/catchAsync'
-import { Configuration, OpenAIApi } from 'openai'
-import config from '../../../config'
+
 import sendResponse from '../../../shared/sendReponse'
 import httpStatus from 'http-status'
+import { TextGenerationService } from './text_generation.service'
 
 export const generateText = catchAsync(
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -16,50 +16,16 @@ export const generateText = catchAsync(
     1. {Question will be here}, True/False
     2. {Question will be here}, True/False
     3. {Question will be here}, True/False
-    ... So on
+    ... So on   
     
     `
-
-    const configuration = new Configuration({
-      apiKey: config.openai_api_key,
-    })
-
-    const openai = new OpenAIApi(configuration)
-
-    const generatedTextResponse = await openai.createCompletion({
-      model: 'text-davinci-003',
-      prompt: `${prompt}`,
-      temperature: 0,
-      max_tokens: 3000,
-      top_p: 1,
-      frequency_penalty: 0.5,
-      presence_penalty: 0,
-    })
-
-    const generatedText = generatedTextResponse.data.choices?.[0].text || ''
-
-    // Extract questions from the generated text
-    const questionsRegex = /\d+\.\s*(.*?)\s*(?:\(([a-z])\)|True\/False)/gi
-    const questions: string[] = []
-    let match
-    while ((match = questionsRegex.exec(generatedText))) {
-      questions.push(match[1])
-    }
-
-    // Create a new text generation document
-    // const textGeneration = new TextGeneration({
-    //   prompt: req.body.prompt,
-    //   generatedText,
-    // });
-
-    // Save the generated text
-    // await textGeneration.save()
+    const result = await TextGenerationService.generateText(prompt)
 
     sendResponse(res, {
       statusCode: httpStatus.CREATED,
       success: true,
       message: 'Generated text successfully',
-      data: questions,
+      data: result,
     })
 
     next()
