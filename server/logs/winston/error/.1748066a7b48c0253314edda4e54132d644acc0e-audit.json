@@ -6,14 +6,19 @@
     "auditLog": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/.1748066a7b48c0253314edda4e54132d644acc0e-audit.json",
     "files": [
         {
-            "date": 1687344138690,
-            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-21-16-error.log",
-            "hash": "bbccffba63d6354c1f7cf64c197e1c657a941b835dca6cdb41ff5f1b71384f40"
+            "date": 1687611253721,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-24-18-error.log",
+            "hash": "158ff66f1600620bf1e7167b33e398a61b1456502a3ec65867c2e61748170856"
         },
         {
-            "date": 1687346169550,
-            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-21-17-error.log",
-            "hash": "7c1c8f1b1a5953a067b69d21ed57f30bb00dd4889a1cebac1c07b6c1568eea1d"
+            "date": 1687612823025,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-24-19-error.log",
+            "hash": "4f47641bb0d93b825c5b8c95b0d55ef8097ef022695c6ff98ff344ac96474118"
+        },
+        {
+            "date": 1687622661860,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/error/phu-2023-06-24-22-error.log",
+            "hash": "182875b43f1c3dd958822f14fef96747ee5de0a491079e9723ace0cd636c9613"
         }
     ],
     "hashType": "sha256"

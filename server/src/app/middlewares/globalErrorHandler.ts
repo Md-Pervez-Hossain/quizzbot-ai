@@ -10,7 +10,7 @@ import handleZodValidationError from '../../errors/handleZodValidationError'
 import handleCastValidationError from '../../errors/handleCastValidationError'
 import handleMongoServerError from '../../errors/handleMongoServerError'
 
-const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
   if (config.env === 'development') {
     console.log(error)
   } else {
@@ -24,7 +24,6 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
 
   if (error instanceof ZodError) {
     const simplifiedError = handleZodValidationError(error)
-
     statusCode = simplifiedError.statusCode
     message = simplifiedError.message
     errorMessages = simplifiedError.errorMessages

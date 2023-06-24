@@ -6,14 +6,19 @@
     "auditLog": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/.e0e713f5f70b201c373d467713d5be5b68c38cb0-audit.json",
     "files": [
         {
-            "date": 1687344138689,
-            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-21-16-success.log",
-            "hash": "859d914b5422ef8822db352585150216faad943a0e1e8e9efa0d9b9c96c7f664"
+            "date": 1687611253718,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-24-18-success.log",
+            "hash": "ed7ca1dd52c996f55e4b033369d9c43f55317785e05cf6583409573a551c3d0a"
         },
         {
-            "date": 1687346111631,
-            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-21-17-success.log",
-            "hash": "bc1f32c034ea9155dbc806ea38159f65695a8e385cd9d0804086a2c865c5eea5"
+            "date": 1687612823022,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-24-19-success.log",
+            "hash": "a475b7302ab3b94b25309352ca996607b798fd0b1501db7233631b72259adf78"
+        },
+        {
+            "date": 1687622661857,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-24-22-success.log",
+            "hash": "e7ebdc88c0ecb5a904ea30496c60da056d27ff86d9bb3942d52615f61e263e17"
         }
     ],
     "hashType": "sha256"

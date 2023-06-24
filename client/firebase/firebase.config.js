@@ -13,9 +13,11 @@ const firebaseConfig = {
   storageBucket: "quizzbot-ai.appspot.com",
   messagingSenderId: "803163016781",
   appId: "1:803163016781:web:470d97ea1b35d23e4a1604",
-  measurementId: "G-2KPMJK7E2D"
+  measurementId: "G-2KPMJK7E2D",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export default app;

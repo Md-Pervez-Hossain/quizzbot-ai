@@ -11,7 +11,7 @@ const validateRequest =
         params: req.params,
         cookies: req.cookies,
       })
-      next()
+      return next()
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       next(error)

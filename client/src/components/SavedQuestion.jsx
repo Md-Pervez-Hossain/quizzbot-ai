@@ -1,6 +1,8 @@
+import SavedQuestionTable from "./SavedQuestionTable";
+
 const SavedQuestion = () => {
   return (
-    <section className="border-2 border-[#EEE]  rounded-xl py-5 mt-5 mr-8">
+    <section className="border-2 border-[#EEE]  rounded-xl py-5 mt-5 mr-8 mb-10">
       {/* Saved Question Text */}
       <h1 className="text-center text-3xl font-bold mb-8">Saved Question</h1>
 
@@ -26,6 +28,7 @@ const SavedQuestion = () => {
           </div>
         </div>
       </div>
+      <SavedQuestionTable />
     </section>
   );
 };
