@@ -8,7 +8,7 @@ const PasswordInput = ({ password, handleChange, error }) => {
         type="password"
         id="password"
         name="password"
-        className="border border-gray-300 rounded-2xl w-full p-2 pl-4 placeholder:text-xs text-black"
+        className="border border-[#eee] rounded-2xl w-full p-2 pl-4 placeholder:text-xs text-black"
         placeholder="min 8 characters"
         value={password}
         onChange={handleChange}
