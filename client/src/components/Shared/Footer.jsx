@@ -39,8 +39,7 @@ const Footer = () => {
       </div>
       <hr className="text-white" />
       <div className="bg-black p-4 text-center text-neutral-700 dark:text-neutral-200">
-        © 2023{" "}
-        <Link href="/">Ai-Quizzbot</Link>
+        © 2023 <Link href="/">Ai-Quizzbot</Link>
       </div>
     </footer>
   );

@@ -40,10 +40,10 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="">
-      <div className=" mt-5  ">
-        <div>
-          <div>
+    <div className="sticky top-20 z-50">
+      <div className=" mt-5">
+        <div className="">
+          <div className="">
             <Link href="/">
               <Image
                 src={logo}
