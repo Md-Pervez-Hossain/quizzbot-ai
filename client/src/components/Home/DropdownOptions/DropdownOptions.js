@@ -10,7 +10,7 @@ const DropdownOptions = ({ label, name, options }) => {
         name={name}
         id={name}
         required
-        className="px-3 py-2 w-full rounded-2xl border-2 border-gray-200 mt-2"
+        className="px-3 py-2 w-full rounded-2xl border-2 border-[#eee] mt-2"
       >
         {options?.map((option) => (
           <option key={option} value={option} className="rounded-2xl  ">

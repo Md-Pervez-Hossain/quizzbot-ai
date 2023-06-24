@@ -47,7 +47,7 @@ const SavedDocumentDetails = () => {
           <input
             type="text"
             name="saveGeneratedQuestion"
-            className="px-6 py-2 w-full rounded-2xl border-2 border-gray-200"
+            className="px-6 py-2 w-full rounded-2xl border-2 border-[#eee]"
             placeholder="Artificial Intelligence"
           />
         </div>

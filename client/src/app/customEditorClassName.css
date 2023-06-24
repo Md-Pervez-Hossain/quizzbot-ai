@@ -1,11 +1,11 @@
 customToolbarClassName,
 .customEditorClassName {
-  border: 2px solid #f9f9f9;
+  border: 2px solid #eee;
   min-height: 400px;
   padding: 5px;
   border-radius: 15px;
 }
 .customToolbarClassName {
-  border: 2px solid #f9f9f9;
+  border: 2px solid #eee;
   border-radius: 15px;
 }

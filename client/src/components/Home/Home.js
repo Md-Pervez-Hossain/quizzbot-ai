@@ -83,7 +83,7 @@ const Home = () => {
                 Paste Your Text?
               </label>
               <textarea
-                className="px-6 py-2 rounded-2xl border-2 border-gray-200 mt-3"
+                className="px-6 py-2 rounded-2xl border-2 border-[#eee] mt-3"
                 rows={7}
                 name="content"
                 required

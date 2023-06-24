@@ -51,7 +51,7 @@ const Options = () => {
     },
   ];
   return (
-    <div className="mt-5 bg-[#f9f9f9] rounded-2xl border border-gray-300">
+    <div className="mt-5 bg-[#f9f9f9] rounded-2xl border border-[#eee]">
       <div className="grid grid-cols-7 gap-5">
         {buttonOptions?.map((buttonOption) => (
           <Link

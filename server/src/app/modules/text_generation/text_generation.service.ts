@@ -20,12 +20,12 @@ const generateText = async (prompt: string) => {
 
   const generatedText = generatedTextResponse.data.choices?.[0].text || ''
 
-//   const questionsRegex = /\d+\.\s*(.*?), True\/False/g
-//   const questions: string[] = []
-//   let match
-//   while ((match = questionsRegex.exec(generatedText))) {
-//     questions.push(match[1])
-//   }
+  //   const questionsRegex = /\d+\.\s*(.*?), True\/False/g
+  //   const questions: string[] = []
+  //   let match
+  //   while ((match = questionsRegex.exec(generatedText))) {
+  //     questions.push(match[1])
+  //   }
 
   //   // Create a new text generation document
   //   const textGeneration = new TextGeneration({
@@ -36,7 +36,7 @@ const generateText = async (prompt: string) => {
   // //   Save the generated text
   //   await textGeneration.save()
 
-  return generateText
+  return generatedText
 }
 
 export const TextGenerationService = { generateText }
