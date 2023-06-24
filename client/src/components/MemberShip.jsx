@@ -1,43 +1,43 @@
+import PrimaryButton from "./PrimaryButton";
+
 const MemberShip = () => {
   return (
-    <section className="border-2 border-[#EEE] rounded-xl mr-8 py-5 mt-5">
-      {/* Membership Text */}
-      <h1 className="text-center text-3xl  font-bold">Membership</h1>
+    <div className="  border-2 border-[#EEE] rounded-xl mt-5 py-5 mr-8 px-10">
+      <h1 className="text-center font-bold text-3xl">Membership</h1>
+      <h2 className=" text-xl mb-2">Current Plan</h2>
 
-      {/* Current Plan section */}
-      <div className="px-10">
-        <h1 className="lg:text-xl md:text-xl text-lg text-center lg:text-left md:text-left">
-          Current Plan
-        </h1>
-
-        {/* Current Plan div style */}
-        <div className="bg-gradient-to-r from-[#FC495F] to-[#FFC371] bg-size-200 lg:flex md:flex hidden justify-between rounded-xl px-6 py-3 mt-2 text-white font-bold">
-          <p>Membership</p>
-          <p>Payment Method</p>
-          <p className="lg:-ml-10">Start Date</p>
-          <p>End Date</p>
-          <p>Action</p>
-        </div>
-
-        <div className="lg:flex md:flex md:justify-between lg:justify-between items-center ">
-          {/* Current Plan Data div style */}
-          <div className="bg-gray-100 rounded-lg p-4 w-full mt-4">
-            {/* Current Plan Data */}
-            <div className="lg:flex md:flex lg:justify-between  lg:items-center space-y-3 lg:space-y-0 md:space-y-0  ">
-              <p className="ml-8">Trial</p>
+      <table className="min-w-full">
+        <thead className="bg-gradient-to-r from-[#FC495F] to-[#FFC371] bg-size-200 text-white ">
+          <tr className="">
+            <th className="p-3 rounded-l-2xl">Member Ship</th>
+            <th className="p-3">Payment Mood</th>
+            <th className="p-3">Start Date</th>
+            <th className="p-3">End Date</th>
+            <th className="p-3 rounded-r-2xl">Status</th>
+          </tr>
+        </thead>
+        <div className="my-4"></div>
+        <tbody className="bg-gray-100">
+          <tr className=" text-center m-10">
+            <td className=" rounded-l-2xl">
+              <p>Trail</p>
+            </td>
+            <td className="">
               <p>One Time</p>
-              <p>32/12/1996</p>
+            </td>
+            <td className="">
+              <p>20/12/1996</p>
+            </td>
+            <td className="">
               <p>31/12/1996</p>
-              <button className="rounded-lg px-2 py-[1.1rem] mt-[0.90rem] bg-gradient-to-r from-[#FC495F] to-[#FFC371] text-white text-sm">
-                Change Plan
-              </button>
-            </div>
-          </div>
-
-          {/* Change Plan button */}
-        </div>
-      </div>
-    </section>
+            </td>
+            <td className=" rounded-r-2xl">
+              <PrimaryButton>Change Plan</PrimaryButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
