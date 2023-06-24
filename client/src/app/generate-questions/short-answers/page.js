@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="mb-16">
+    <div>
       <Home></Home>
     </div>
   );

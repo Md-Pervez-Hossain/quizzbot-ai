@@ -24,34 +24,43 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={varela_round.className}>
-        <AuthProvider>
-          {pathname !== "/sign-up" && pathname !== "/" ? (
-            <>
-              <div className="grid grid-cols-5 gap-8">
-                <div className="col-span-1 bg-white font-bold  p-10 sticky top-0 ">
-                  <Sidebar></Sidebar>
-                </div>
-                <div className="col-span-4 mt-8">
-                  <div className="mr-8">
-                    <Header></Header>
-
-                    {pathname === "/generate-questions" ? (
-                      <>
-                        <Options></Options>
-                      </>
-                    ) : (
-                      <></>
-                    )}
+        <div>
+          <AuthProvider>
+            {pathname !== "/sign-up" && pathname !== "/" ? (
+              <>
+                <div className="grid grid-cols-5 gap-8 min-h-screen   ">
+                  <div className="col-span-1 bg-white font-bold  px-10 py-16 sticky top-0 border-r-2 border-[#eee] ">
+                    <Sidebar></Sidebar>
                   </div>
-                  {children}
+                  <div className="col-span-4 mt-8">
+                    <div className="mr-8">
+                      <Header></Header>
+                      {pathname === "/generate-questions" ||
+                      pathname === "/generate-questions/true-false" ||
+                      pathname === "/generate-questions/multiple-questions" ||
+                      pathname === "/generate-questions/short-answers" ||
+                      pathname === "/generate-questions/blanks" ||
+                      pathname === "/generate-questions/matching" ||
+                      pathname === "/generate-questions/calculations" ||
+                      pathname === "/generate-questions/teacher-tool" ? (
+                        <>
+                          {" "}
+                          <Options></Options>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                    {children}
+                  </div>
                 </div>
-              </div>
-            </>
-          ) : (
-            <>{children}</>
-          )}
-          <Footer />
-        </AuthProvider>
+              </>
+            ) : (
+              <>{children}</>
+            )}
+            <Footer />
+          </AuthProvider>
+        </div>
       </body>
     </html>
   );

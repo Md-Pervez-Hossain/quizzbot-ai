@@ -8,8 +8,7 @@ const TextInput = ({ label, name }) => {
         type="text"
         name={name}
         id={name}
-        
-        className="px-6 py-2 w-full rounded-2xl border-2 border-[#f9f9f9] mt-2"
+        className="px-6 py-2 w-full rounded-2xl border-2 border-gray-200 mt-2"
       />
     </div>
   );
