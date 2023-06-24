@@ -15,15 +15,15 @@ const DynamicEditor = dynamic(
   }
 );
 const SavedDocumentDetails = () => {
-    const [editorState, setEditorState] = useState(null);
+  const [editorState, setEditorState] = useState(null);
 
-    useEffect(() => {
-      setEditorState(EditorState.createEmpty());
-    }, []);
+  useEffect(() => {
+    setEditorState(EditorState.createEmpty());
+  }, []);
 
-    const onEditorStateChange = (newEditorState) => {
-      setEditorState(newEditorState);
-    };
+  const onEditorStateChange = (newEditorState) => {
+    setEditorState(newEditorState);
+  };
   return (
     <div className="my-8 mx-20 flex flex-col ">
       <div className="flex justify-between">
