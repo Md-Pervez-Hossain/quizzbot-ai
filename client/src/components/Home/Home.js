@@ -24,6 +24,16 @@ const Home = () => {
     prompt = "This is Calculation Prompt";
   } else if (pathname === "/generate-questions/teacher-tool") {
     prompt = "This is Teacher-tool Prompt";
+  } else if (pathname === "/generate-questions/teacher-tool/lesson-planer") {
+    prompt = "This is Lesson planer Prompt";
+  } else if (pathname === "/generate-questions/teacher-tool/project-ideas") {
+    prompt = "This is Project Ideas Prompt";
+  } else if (pathname === "/generate-questions/teacher-tool/group-creator") {
+    prompt = "This is Group Creator Prompt";
+  } else if (pathname === "/generate-questions/teacher-tool/seating-chart") {
+    prompt = "This is Group Creator Prompt";
+  } else if (pathname === "/generate-questions/teacher-tool/study-points") {
+    prompt = "This is study Points Prompt";
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -104,7 +114,7 @@ const Home = () => {
               name="versionCount"
               options={numberOfVersions}
             ></DropdownOptions>
-            <PrimaryButton disabled>Generate Output</PrimaryButton>
+            <PrimaryButton classNamemb="mb-3">Generate Output</PrimaryButton>
           </div>
         </form>
         <div className="rounded-lg mr-8 col-span-2">

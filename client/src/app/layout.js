@@ -29,10 +29,10 @@ export default function RootLayout({ children }) {
             {pathname !== "/sign-up" && pathname !== "/" ? (
               <>
                 <div className="grid grid-cols-5 gap-8 min-h-screen   ">
-                  <div className="col-span-1 bg-white font-bold  px-10 py-16 sticky top-0 border-r-2 border-[#eee] ">
+                  <div className="col-span-1 bg-white font-bold  px-8 py-16 sticky top-0 border-r-2 border-[#eee] ">
                     <Sidebar></Sidebar>
                   </div>
-                  <div className="col-span-4 mt-8">
+                  <div className="col-span-4 ">
                     <div className="mr-8">
                       <Header></Header>
                       {pathname === "/generate-questions" ||
@@ -42,9 +42,18 @@ export default function RootLayout({ children }) {
                       pathname === "/generate-questions/blanks" ||
                       pathname === "/generate-questions/matching" ||
                       pathname === "/generate-questions/calculations" ||
-                      pathname === "/generate-questions/teacher-tool" ? (
+                      pathname === "/generate-questions/teacher-tool" ||
+                      pathname ===
+                        "/generate-questions/teacher-tool/lesson-planer" ||
+                      pathname ===
+                        "/generate-questions/teacher-tool/project-ideas" ||
+                      pathname ===
+                        "/generate-questions/teacher-tool/study-points" ||
+                      pathname ===
+                        "/generate-questions/teacher-tool/group-creator" ||
+                      pathname ===
+                        "/generate-questions/teacher-tool/seating-chart" ? (
                         <>
-                          {" "}
                           <Options></Options>
                         </>
                       ) : (
