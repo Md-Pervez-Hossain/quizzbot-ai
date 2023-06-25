@@ -1,4 +1,6 @@
 import { Schema, model } from 'mongoose'
+import { ObjectId } from 'mongoose'
+
 import { ISingleSavedQuestion } from './single_saved_questions.interface'
 import {
   difficulty,
@@ -32,6 +34,9 @@ const SingleSavedQuestionSchema = new Schema<ISingleSavedQuestion>(
       type: String,
       required: true,
       enum: numberOfSets,
+    },
+    generatedText: {
+      type: String,
     },
   },
   {

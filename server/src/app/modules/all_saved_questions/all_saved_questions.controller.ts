@@ -11,6 +11,7 @@ const addSavedQuestion = catchAsync(async (req: Request, res: Response) => {
     language,
     difficulty,
     number_of_sets,
+    generatedText,
   } = req.body.question
   const userId = req.params.userId
 
@@ -20,6 +21,7 @@ const addSavedQuestion = catchAsync(async (req: Request, res: Response) => {
     language,
     difficulty,
     number_of_sets,
+    generatedText,
   }
 
   const result = await AllSavedQuestionsService.addSavedQuestion(
@@ -48,7 +50,46 @@ const getAllSavedQuestions = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const updateSingleSavedQuestion = catchAsync(
+  async (req: Request, res: Response) => {
+    const questionId = req.params.questionId
+    const { userId, text } = req.body
+    const result = await AllSavedQuestionsService.updateSingleSavedQuestion(
+      userId,
+      questionId,
+      text
+    )
+
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Question updated successfully',
+      data: result,
+    })
+  }
+)
+
+const deleteSingleSavedQuestion = catchAsync(
+  async (req: Request, res: Response) => {
+    const questionId = req.params.questionId
+    const { userId } = req.body
+    const result = await AllSavedQuestionsService.deleteSingleSavedQuestion(
+      userId,
+      questionId
+    )
+
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Question deleted successfully',
+      data: result,
+    })
+  }
+)
+
 export const AllSavedQuestionsController = {
   getAllSavedQuestions,
   addSavedQuestion,
+  updateSingleSavedQuestion,
+  deleteSingleSavedQuestion,
 }
