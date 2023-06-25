@@ -1,53 +1,40 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
 
 const BarChart = () => {
   const [chartData, setChartData] = useState({
+    labels: [],
     datasets: [],
   });
 
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+    const currentDate = new Date();
+    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    const labels = Array.from({ length: daysInMonth }, (_, index) => {
+      const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), index + 1);
+      const day = date.toLocaleDateString("en-US", { weekday: "short" });
+      const dayOfMonth = date.toLocaleDateString("en-US", { day: "numeric" });
+      return `${day}, ${dayOfMonth}`;
+    });
+
     setChartData({
-      labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+      labels: labels,
       datasets: [
-        // {
-        //   label: "Sales $",
-        //   data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
-        //   borderColor: "rgb(53, 162, 235)",
-        //   backgroundColor: "rgb(53, 162, 235, 0.4",
-        // },
         {
-          label: "Not Saled $",
-          data: [18100, 20001, 23195, 19940, 17180, 19845, 22485],
+          label: "Daily words used",
+          data: [0, 300, 700, 1300, 500],
           borderColor: "rgb(255, 99, 132)",
           backgroundColor: "rgba(255, 99, 132, 0.5)",
         },
       ],
     });
+
     setChartOptions({
       plugins: {
         legend: {
@@ -55,11 +42,29 @@ const BarChart = () => {
         },
         title: {
           display: true,
-          text: "Daily Words Used",
+          text: " Words used this month",
         },
       },
       maintainAspectRatio: false,
       responsive: true,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Date",
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Words",
+          },
+          ticks: {
+            stepSize: 1000,
+            callback: (value) => `${value}`,
+          },
+        },
+      },
     });
   }, []);
 
