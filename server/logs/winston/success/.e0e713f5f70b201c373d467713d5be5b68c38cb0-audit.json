@@ -19,6 +19,11 @@
             "date": 1687622661857,
             "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-24-22-success.log",
             "hash": "e7ebdc88c0ecb5a904ea30496c60da056d27ff86d9bb3942d52615f61e263e17"
+        },
+        {
+            "date": 1687682216528,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-25-14-success.log",
+            "hash": "e332619c56775cd15fd0892b0ea6384f36eaef8bfd65005118e543e9e9cee23f"
         }
     ],
     "hashType": "sha256"
