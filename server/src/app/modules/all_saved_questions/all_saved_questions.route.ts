@@ -12,4 +12,14 @@ router.post(
   AllSavedQuestionsController.addSavedQuestion
 )
 
+router.patch(
+  '/:questionId',
+  AllSavedQuestionsController.updateSingleSavedQuestion
+)
+
+router.delete(
+  '/:questionId',
+  AllSavedQuestionsController.deleteSingleSavedQuestion
+)
+
 export const AllSavedQuestionsRoute = router

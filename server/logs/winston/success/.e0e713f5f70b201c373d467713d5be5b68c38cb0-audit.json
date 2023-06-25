@@ -24,6 +24,21 @@
             "date": 1687682216528,
             "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-25-14-success.log",
             "hash": "e332619c56775cd15fd0892b0ea6384f36eaef8bfd65005118e543e9e9cee23f"
+        },
+        {
+            "date": 1687716250510,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-26-00-success.log",
+            "hash": "38a8843ed974ed48f4c8c74485369115838763294ba319aea1f213d46741664b"
+        },
+        {
+            "date": 1687719611621,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-26-01-success.log",
+            "hash": "192db4439243ee842f811f94ef86e0e2df52f28678990f3b79fe4f883baec9af"
+        },
+        {
+            "date": 1687723260567,
+            "name": "/Users/farhatmahi/Documents/ProgrammingHero/ai-quizzbot/server/logs/winston/success/phu-2023-06-26-02-success.log",
+            "hash": "05308a4b6ebeb55b6961bb27850a58f54b37217d93833775764bc166364f38e0"
         }
     ],
     "hashType": "sha256"

@@ -4,6 +4,7 @@ export interface ISingleSavedQuestion {
   language: ILanguage
   difficulty: IDifficulty
   number_of_sets: INumberOfSets
+  generatedText: string;
 }
 
 export type IDifficulty = 'Easy' | 'Average' | 'Above Average' | 'Difficult'
