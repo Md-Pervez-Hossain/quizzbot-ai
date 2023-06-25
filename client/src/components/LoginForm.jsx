@@ -23,8 +23,10 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
+  const [loginError, setLoginError] = useState("");
 
   const handleChange = (e) => {
+    setLoginError('')
     const { name, value } = e.target;
     setData((prevState) => ({
       ...prevState,
@@ -38,24 +40,21 @@ const LoginForm = () => {
 
   const handleSignIn = () => {
     if (validateForm(data, setErrors, false)) {
-      console.log('click')
       const { email, password } = data;
-      console.log(email, password);
       setLoading(true);
       login(email, password)
         .then((res) => {
           const user = res.user;
-          console.log(user);
           setLoading(false);
           router.push("/dashboard");
         })
         .catch((err) => {
           console.log(err);
+          setLoginError("Incorrect email or password.");
           setLoading(false);
         });
-    }
-    else{
-      console.log("issue")
+    } else {
+      console.log("issue");
     }
   };
 
@@ -77,6 +76,7 @@ const LoginForm = () => {
         handleChange={handleChange}
         error={errors.password}
       />
+      {loginError && <div className="my-3 text-sm text-red-500">{loginError}</div>}
       <RememberMe />
       {loading ? (
         <PrimaryButton loading={loading}>
@@ -85,6 +85,8 @@ const LoginForm = () => {
       ) : (
         <PrimaryButton funq={handleSignIn}>Log In</PrimaryButton>
       )}
+
+      
 
       <p className="text-sm text-black mt-6 ">
         New here?{" "}
