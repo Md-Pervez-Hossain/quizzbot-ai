@@ -18,7 +18,7 @@ const Sidebar = () => {
     {
       id: 1,
       name: "Generate Questions",
-      link: `/generate-questions`,
+      link: `/generate-questions/true-false`,
     },
 
     {
@@ -157,8 +157,8 @@ const Sidebar = () => {
                 );
               })}
               <div className="flex items-center gap-3 cursor-pointer">
-                <LuLogOut className="text-[20px]"></LuLogOut>{" "}
-                <span>Logout</span>
+                <LuLogOut className="text-[20px] "></LuLogOut>{" "}
+                <span className="font-normal">Logout</span>
               </div>
             </div>
           </div>

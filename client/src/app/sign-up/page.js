@@ -79,7 +79,7 @@ const page = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-20 mb-28">
+    <div className="flex flex-col justify-center items-center min-h-[100vh]">
       <div className="text-center w-1/3">
         <h1 className="text-2xl">Let's create your Ai-Quizzbot account!</h1>
         <p className="text-lg mt-2 text-gray-500 mb-10">
